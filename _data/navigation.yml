@@ -7,7 +7,7 @@ main:
     url: "/#-news"
 
   - title: "Research Experiences"
-  url: "/#-internships"
+  url: "/#-research-experiences"
 
   # - title: "Publications"
   #   url: "/#-publications"
@@ -21,4 +21,5 @@ main:
   # - title: "Invited Talks"
   #   url: "/#-invited-talks"
 
-
+  - title: "Internships"
+  url: "/#internships"
