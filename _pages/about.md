@@ -26,9 +26,8 @@ My research interest includes Network Architecture Search and Natural Language P
 - *2022.08*: &nbsp;🎉🎉 I started my Master of Science, Computer Science program at Duke University. 
 
 # 💻 Research Experience
-Research Assistant (Jan – June 2023)
-– Out-Of-Distribution Detection With PixMix
-• Experimented with the influence of PixMix pictures on Out-of-Distribution Detection, by filtering the maximum softmax probability from the datasets and mixing with the In-Distribution ones, showed promise to improve accuracy
+- Research Assistant (Jan – June 2023), Out-Of-Distribution Detection With PixMix
+  - Experimented with the influence of PixMix pictures on Out-of-Distribution Detection, by filtering the maximum softmax probability from the datasets and mixing with the In-Distribution ones, showed promise to improve accuracy
 
 Machine Learning Researcher (Sept – Jan 2023)
 – Knowledge Distillation In Adversarial Context
@@ -63,23 +62,15 @@ Research Team Lead (Apr 2020 – Jun 2020)
 • Won Outstanding Research Leadership Award and scholarships $600, innovative research procedures and deeds are interviewed by three local major media and reported on anti-pandemic contribution page.
 
 # 🎖 Honors and Awards
-- *2022.09* 
-George Washington University
--	Dean’s List of the Year 2020, 2021, 2022
--	Beta Gamma Sigma Honor Society of Class 2022
--	Outstanding Student Award of the Year 2022
-
-- *2021.09*
-Information Accessibility Research Association 
--	Outstanding Intern of the Year 2020
-
-- *2020.09*
-Zhejiang Normal University
--	National Foreign-Trade Business Investigation Award in China Year 2020
--	Outstanding Student Scholarships of the Year 2018
--	Speech & Debate Competition Oustanding Award of the Year 2018
--	Student Representative for Opening Ceremony of the Class 2018
--	Outstanding Student in International Summer Camp of Summer 2018
+-	George Washington University, Dean’s List of the Year 2020, 2021, 2022
+-	George Washington University, Beta Gamma Sigma Honor Society of Class 2022
+-	George Washington University, Outstanding Student Award of the Year 2022
+-	Information Accessibility Research Association, Outstanding Intern of the Year 2020,
+-	Zhejiang Normal University, National Foreign-Trade Business Investigation Award in China Year 2020
+-	Zhejiang Normal University, Outstanding Student Scholarships of the Year 2018
+-	Zhejiang Normal University, Speech & Debate Competition Oustanding Award of the Year 2018
+-	Zhejiang Normal University, Student Representative for Opening Ceremony of the Class 2018
+-	Zhejiang Normal University, Outstanding Student in International Summer Camp of Summer 2018
 
 # 📖 Educations
 - *2022.08 - 2023.02 (now)*, Master of Science, Computer Science, 4.0, Duke University, Durham, NC.
