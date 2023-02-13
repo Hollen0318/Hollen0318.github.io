@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Haoran Zhang, Duke University"
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -17,14 +17,76 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+Hi I am Haoran Zhang, current Machine Learning Research Assistant at <a href='https://cei.pratt.duke.edu/'>Duke Center of Computational Evolutionary Intelligence (CEI) Lab</a>. 
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research interest includes Network Architecture Search and Natural Language Processing. I have wrote 5+ papers in these fields. 
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2022.08*: &nbsp;🎉🎉 I started my Master of Science, Computer Science program at Duke University. 
+
+# 💻 Research Experience
+Research Assistant (Jan – June 2023)
+– Out-Of-Distribution Detection With PixMix
+• Experimented with the influence of PixMix pictures on Out-of-Distribution Detection, by filtering the maximum softmax probability from the datasets and mixing with the In-Distribution ones, showed promise to improve accuracy
+
+Machine Learning Researcher (Sept – Jan 2023)
+– Knowledge Distillation In Adversarial Context
+• Designed Adversarial Training based on Artificial Neural Network Knowledge distillations, researched on state of art methods including Student-Teacher Reverse Distillation, Teacher-Free Distillation, and Self-Distillation
+
+Graph Algorithm Researcher (Sept – Jan 2023)
+– Digraph Clustering By Marginal Propagation
+• Invented a novel Graph Clustering algorithm by Marginal Propagation on Directed Graph Dataset Email-EU Core, by viewing community detection as a semi-supervised learning task, generating clusters from marginal propagation
+
+Cryo-EM Researcher (Sept – Jan 2023)
+– Atomic Modeling From Cryo-EM Density Maps
+• Compared the differences between ModelAngelo and Phenix on atomic modeling, experimented with the same datasets, and provided extra insights into performance and potential improvement suggestions on the disparity
+
+Work Experience
+Information System Engineer (Nov 2020 – Apr 2021)
+– Information Accessibility Research Association
+• Designed and implemented a Tritanope Accessibility Algorithm optimizes Web & Application color layout to achieve WCAG 2.0 standards, supporting color-blindness people in using modern technology devices
+• Acted as chief manager of Accessibility Defects by developing series of data migration and triage scripts to achieve data integration, conducting Barrer-Free Technology Research by deploying SQL server and SPSS
+• Optimized deficiency testing and regression progress efficiency utilizing Python & VBA languages to 50%, saving estimated labor costs $3,000 per month and enhancing both accuracy of detection and errors identification
+• Won Outstanding Interns Award for year 2020 for significant contributions in data migration and triage, developed relevant scripts & algorithms registered for personal invention patents
+
+Global Cooperation Intern (Nov 2020 – Dec 2020)
+– Innoway
+• Produced 50+ daily short reports on Europe, Asia, World and China innovation news, assisted industrial demand docking consulting, and contributing foreign enterprises to survive and develop during COVID-19
+• Conducted a descriptive analysis on demographic information of registered candidates using advanced Excel functions and SPSS to aid in human capital managers’ prospective talents recruitment targets and scenarios
+• Enrolled in the DMCC (Dubai Multi Commodities Centre) China Representative Office opening ceremony, translating and reporting to department to provide innovation intelligences between China and Arab in COVID-19
+
+Research Team Lead (Apr 2020 – Jun 2020)
+– Zhejiang Normal University
+• Led 12 teams investigated 157 foreign trade enterprises and closely interviewed 19 major corporations and 3 different regions’ Ministry of Business, contribute to overall pandemic economic crisis recovery.
+• Directed research members and revised a 15,000-word elaborate investigation report to be signed and approved by Minister of Business to assist local foreign trade enterprises in meeting its needs.
+• Won Outstanding Research Leadership Award and scholarships $600, innovative research procedures and deeds are interviewed by three local major media and reported on anti-pandemic contribution page.
+
+# 🎖 Honors and Awards
+- *2022.09* 
+George Washington University
+-	Dean’s List of the Year 2020, 2021, 2022
+-	Beta Gamma Sigma Honor Society of Class 2022
+-	Outstanding Student Award of the Year 2022
+
+- *2021.09*
+Information Accessibility Research Association 
+-	Outstanding Intern of the Year 2020
+
+- *2020.09*
+Zhejiang Normal University
+-	National Foreign-Trade Business Investigation Award in China Year 2020
+-	Outstanding Student Scholarships of the Year 2018
+-	Speech & Debate Competition Oustanding Award of the Year 2018
+-	Student Representative for Opening Ceremony of the Class 2018
+-	Outstanding Student in International Summer Camp of Summer 2018
+
+# 📖 Educations
+- *2022.08 - 2023.02 (now)*, Master of Science, Computer Science, 4.0, Duke University, Durham, NC.
+- *2020.08 - 2022.05*, Bachelor of Science, Information Systems, 3.99, The George Washington University, Washington DC.
+- *2021.07 - 2021.08*, Summer School, Mathematics and Computer Science, 4.0, Shanghai Jiao Tong University, Shanghai, China.
+- *2018.08 - 2020.06*, Bachelor of Business Administration, Finance and Financial Management Services, 3.85, Jinhua, China.
+- *2019.01 - 2019.02*, International Academy, Accounting and Finance, Austin, Texas.
 
 # 📝 Publications 
 
@@ -42,17 +104,9 @@ My research interest includes neural machine translation and computer vision. I 
 
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
