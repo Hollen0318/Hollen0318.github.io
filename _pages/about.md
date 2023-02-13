@@ -21,10 +21,6 @@ Hi I am Haoran Zhang, current Machine Learning Research Assistant at <a href='ht
 
 My research interest includes Network Architecture Search and Natural Language Processing. I have wrote 5+ papers in these fields. 
 
-
-# 🔥 News
-- *2022.08*: &nbsp;🎉🎉 I started my Master of Science, Computer Science program at Duke University. 
-
 # 💻 Research Experience
 - Research Assistant - Out-Of-Distribution Detection With PixMix (Jan – June 2023)
   - Experimented with the influence of PixMix pictures on Out-of-Distribution Detection, by filtering the maximum softmax probability from the datasets and mixing with the In-Distribution ones, showed promise to improve accuracy
@@ -37,6 +33,10 @@ My research interest includes Network Architecture Search and Natural Language P
 
 - Cryo-EM Researcher - Atomic Modeling From Cryo-EM Density Maps (Sept – Jan 2023)
   - Compared the differences between ModelAngelo and Phenix on atomic modeling, experimented with the same datasets, and provided extra insights into performance and potential improvement suggestions on the disparity
+
+# 🔥 News
+- *2022.08*: &nbsp;🎉🎉 I started my Master of Science, Computer Science program at Duke University. 
+
 
 # 🎖 Honors and Awards
 -	George Washington University, Dean’s List of the Year 2020, 2021, 2022
