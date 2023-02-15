@@ -21,7 +21,10 @@ Hi I am Haoran Zhang, current Machine Learning Research Assistant at <a href='ht
 
 My research interest includes Out-of-Distribution Detection, Network Architecture Search and Natural Language Processing.
 
-# 💻 Research Experience
+# 💻 Researches
+- [NEW] Research Assistant - Neural Architecture Research  (Jan – June 2023)
+  - Baseline experiments implementations on DeepFM, DLRM, etc at <a href='https://cei.pratt.duke.edu/'>CEI</a> Lab.
+
 - Research Assistant - Out-Of-Distribution Detection With PixMix (Jan – June 2023)
   - Experimented with the influence of PixMix pictures on Out-of-Distribution Detection, by filtering the maximum softmax probability from the datasets and mixing with the In-Distribution ones, showed promise to improve accuracy
 
@@ -78,8 +81,19 @@ My research interest includes Out-of-Distribution Detection, Network Architectur
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
+# 📂 Projects
+- ALPHA RENT SOLUTIONS	Washington, DC  Database Engineer 	Jan - May 2022 
+  - Designed and implemented a MySQL database, analyzed and performed the data modeling based on business needs, drafted out entity-relationships diagrams, data streams charts, between renters, properties, rents, and various bills
+  - Blueprinted and coded User-Interface layouts and outlooks via a combination of HTML, JavaScript, CSS, balanced accessibility and aesthetics, reviewed and updated the database promptly when business needs alter or increase
+  - Exercised Object Oriented PHP to streamline the data query, modification, deletion, and status updates, enabled unique token registration links, automatically invoked troubleshooting linked with the MAMP server 
 
-# 🎖 Internships
+- CUSTOMER PERSONALITY ANALYSIS	Washington, DC Data Analyst	Sept - Dec 2021 
+  - Executed personality analysis on 2240 customers with 29 variables on shopping personality, identified the three ideal customers clusters for the campaign with Tree Regression, provided recommendations on marketing campaigns
+  - Experimented linear regression model on datasets, appraised model efficiency by building confusion matrix, excluded unworkable variables through executing stepwise regression and best-subsets regression to improve accuracy by 10%
+  - Constructed and performed the Logistic Regression and the K-Nearest Neighbor algorithms on scaled variable to presage campaign responses, optimized the accuracy of the model to 88% and specificity over 90%
+
+
+# 🌟 Internships
 - Information System Engineer - Information Accessibility Research Association (Nov 2020 – Apr 2021)
   - Designed and implemented a Tritanope Accessibility Algorithm optimizes Web & Application color layout to achieve WCAG 2.0 standards, supporting color-blindness people in using modern technology devices
   - Acted as chief manager of Accessibility Defects by developing series of data migration and triage scripts to achieve data integration, conducting Barrer-Free Technology Research by deploying SQL server and SPSS
