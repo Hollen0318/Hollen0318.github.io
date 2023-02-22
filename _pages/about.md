@@ -22,7 +22,7 @@ Hi I am Haoran Zhang, current Machine Learning Research Assistant at <a href='ht
 My research interest includes Out-of-Distribution Detection, Network Architecture Search and Natural Language Processing.
 
 # 💻 Researches
-- [NEW] Research Assistant - Neural Architecture Research  (Jan – June 2023)
+- <span style="color:red">[NEW]</span> Research Assistant - Neural Architecture Research  (Jan – June 2023)
   - Baseline experiments implementations on DeepFM, DLRM, etc at <a href='https://cei.pratt.duke.edu/'>CEI</a> Lab.
 
 - Research Assistant - Out-Of-Distribution Detection With PixMix (Jan – June 2023)
