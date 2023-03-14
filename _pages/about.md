@@ -83,30 +83,30 @@ My research interest includes Out-of-Distribution Detection, Network Architectur
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
 # 📂 Projects
-- Alpha Rent Solutioins	Washington, DC  Database Engineer 	Jan - May 2022 
+- Alpha Rent Solutioins,	Washington, DC,  Database Engineer 	Jan - May 2022 
   - Designed and implemented a MySQL database, analyzed and performed the data modeling based on business needs, drafted out entity-relationships diagrams, data streams charts, between renters, properties, rents, and various bills
   - Blueprinted and coded User-Interface layouts and outlooks via a combination of HTML, JavaScript, CSS, balanced accessibility and aesthetics, reviewed and updated the database promptly when business needs alter or increase
   - Exercised Object Oriented PHP to streamline the data query, modification, deletion, and status updates, enabled unique token registration links, automatically invoked troubleshooting linked with the MAMP server 
 
-- Customer Personality Analysis	Washington, DC Data Analyst	Sept - Dec 2021 
+- Customer Personality Analysis,	Washington, DC, Data Analyst	Sept - Dec 2021 
   - Executed personality analysis on 2240 customers with 29 variables on shopping personality, identified the three ideal customers clusters for the campaign with Tree Regression, provided recommendations on marketing campaigns
   - Experimented linear regression model on datasets, appraised model efficiency by building confusion matrix, excluded unworkable variables through executing stepwise regression and best-subsets regression to improve accuracy by 10%
   - Constructed and performed the Logistic Regression and the K-Nearest Neighbor algorithms on scaled variable to presage campaign responses, optimized the accuracy of the model to 88% and specificity over 90%
 
 
 # 🌟 Internships
-- Information System Engineer - Information Accessibility Research Association (Nov 2020 – Apr 2021)
+- Information Accessibility Research Association, Shenzhen, China, Information System Engineer Nov 2020 – Apr 2021
   - Designed and implemented a Tritanope Accessibility Algorithm optimizes Web & Application color layout to achieve WCAG 2.0 standards, supporting color-blindness people in using modern technology devices
   - Acted as chief manager of Accessibility Defects by developing series of data migration and triage scripts to achieve data integration, conducting Barrer-Free Technology Research by deploying SQL server and SPSS
   - Optimized deficiency testing and regression progress efficiency utilizing Python & VBA languages to 50%, saving estimated labor costs $3,000 per month and enhancing both accuracy of detection and errors identification
   - Won Outstanding Interns Award for year 2020 for significant contributions in data migration and triage, developed relevant scripts & algorithms registered for personal invention patents
 
-- Global Cooperation Intern - Innoway (Nov 2020 – Dec 2020)
+- Innoway, Beijing, China, Global Cooperation Intern Aug 2020 – Dec 2020
   - Produced 50+ daily short reports on Europe, Asia, World and China innovation news, assisted industrial demand docking consulting, and contributing foreign enterprises to survive and develop during COVID-19
   - Conducted a descriptive analysis on demographic information of registered candidates using advanced Excel functions and SPSS to aid in human capital managers’ prospective talents recruitment targets and scenarios
   - Enrolled in the DMCC (Dubai Multi Commodities Centre) China Representative Office opening ceremony, translating and reporting to department to provide innovation intelligences between China and Arab in COVID-19
 
-- Research Team Lead - Zhejiang Normal University (Apr 2020 – Jun 2020),
+- COVID-19 Enterprise Research, Wenzhou, China, Team Lead Apr 2020 – Jun 2020
   - Led 12 teams investigated 157 foreign trade enterprises and closely interviewed 19 major corporations and 3 different regions’ Ministry of Business, contribute to overall pandemic economic crisis recovery.
   - Directed research members and revised a 15,000-word elaborate investigation report to be signed and approved by Minister of Business to assist local foreign trade enterprises in meeting its needs.
   - Won Outstanding Research Leadership Award and scholarships $600, innovative research procedures and deeds are interviewed by three local major media and reported on anti-pandemic contribution page.
