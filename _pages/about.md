@@ -19,7 +19,7 @@ redirect_from:
 
 Hi I am Haoran Zhang, current Machine Learning Research Assistant at <a href='https://cei.pratt.duke.edu/'>Duke Center of Computational Evolutionary Intelligence (CEI) Lab</a>. 
 
-My research interest includes Out-of-Distribution Detection, Network Architecture Search and Natural Language Processing. <a href="https://hollen0318.github.io/_downloads/_CV.pdf" target="_blank" download>My CV</a>
+My research interest includes Out-of-Distribution Detection, Network Architecture Search and Natural Language Processing. <a href="https://hollen0318.github.io/_downloads/_CV.pdf" target="_blank" download>My CV</a>.
 
 
 # 💻 Researches
