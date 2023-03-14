@@ -83,12 +83,12 @@ My research interest includes Out-of-Distribution Detection, Network Architectur
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
 # 📂 Projects
-- ALPHA RENT SOLUTIONS	Washington, DC  Database Engineer 	Jan - May 2022 
+- Alpha Rent Solutioins	Washington, DC  Database Engineer 	Jan - May 2022 
   - Designed and implemented a MySQL database, analyzed and performed the data modeling based on business needs, drafted out entity-relationships diagrams, data streams charts, between renters, properties, rents, and various bills
   - Blueprinted and coded User-Interface layouts and outlooks via a combination of HTML, JavaScript, CSS, balanced accessibility and aesthetics, reviewed and updated the database promptly when business needs alter or increase
   - Exercised Object Oriented PHP to streamline the data query, modification, deletion, and status updates, enabled unique token registration links, automatically invoked troubleshooting linked with the MAMP server 
 
-- CUSTOMER PERSONALITY ANALYSIS	Washington, DC Data Analyst	Sept - Dec 2021 
+- Customer Personality Analysis	Washington, DC Data Analyst	Sept - Dec 2021 
   - Executed personality analysis on 2240 customers with 29 variables on shopping personality, identified the three ideal customers clusters for the campaign with Tree Regression, provided recommendations on marketing campaigns
   - Experimented linear regression model on datasets, appraised model efficiency by building confusion matrix, excluded unworkable variables through executing stepwise regression and best-subsets regression to improve accuracy by 10%
   - Constructed and performed the Logistic Regression and the K-Nearest Neighbor algorithms on scaled variable to presage campaign responses, optimized the accuracy of the model to 88% and specificity over 90%
