@@ -124,7 +124,7 @@ social:
 highlight_name: true
 ---
 
-Hi I am Hollen (Haoran) Zhang, current Master's student at <a href='https://duke.edu/'>Duke Univeristy</a>, majored in Computer Science. My research interest includes Artificial Intelligence, especially on its application for real-world impacts. My conviction is that technology should be leveraged to enhance lives and address societal challenges. <a href="https://drive.google.com/uc?id=1UK7QFH24ziLXcvhJgcB3XoD3_RnEMKev&export=download">My CV</a>.
+Hi I am Hollen (Haoran) Zhang, current PhD's student at <a href='https://www.virginia.edu/'>University of Virginia</a>, majored in Computer Engineering. My research interest includes Artificial Intelligence, especially on its application for real-world impacts. My conviction is that technology should be leveraged to enhance lives and address societal challenges. <a href="https://drive.google.com/uc?id=1UK7QFH24ziLXcvhJgcB3XoD3_RnEMKev&export=download">My CV</a>.
 
-<b style='color:red;'>News</b>: 🎉🎉 I am starting my Ph.D. of Computer Engineering Program at the <a href='https://www.virginia.edu/'>University of Virginia</a> in Fall 2024, honorably advised by <a href='https://engineering.virginia.edu/faculty/amanda-watson'>Professor Amanda Watson</a>.
+<b style='color:red;'>News</b>: 🎉🎉 I have started my position of Doctoral Researcher atthe <a href='https://www.virginia.edu/'>University of Virginia</a> in Fall 2024, honorably advised by <a href='https://engineering.virginia.edu/faculty/amanda-watson'>Professor Amanda Watson</a>.
 {style="text-align: justify;"}
