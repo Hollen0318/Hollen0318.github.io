@@ -113,3 +113,77 @@ footer {
   color: #666;
   margin-bottom: 0.25rem;
 }
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.education-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.education-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.education-card .education-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.education-card p {
+  margin: 0.25rem 0;
+}
+
+.education-card strong {
+  font-weight: 600;
+}
+
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.publication-card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 1rem 1.25rem;
+}
+
+.publication-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.publication-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.publication-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.publication-link:hover {
+  text-decoration: underline;
+}
