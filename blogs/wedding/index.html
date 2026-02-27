@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding Photos</title>
+
+  <style>
+    :root{
+      /* Romantic palette */
+      --bgTop:#1a0f1d;
+      --bgBottom:#0c0a12;
+
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+
+      --radius: 18px;
+
+      --accent1:#ffd1dc; /* blush */
+      --accent2:#e9d5ff; /* lavender */
+      --accent3:#bae6fd; /* sky */
+      --accent4:#fecdd3; /* rose */
+
+      --focusBackdrop: rgba(18,10,22,.70);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+
+    body{
+      margin:0;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      overflow-x:hidden;
+
+      /* Softer, romantic background */
+      background:
+        radial-gradient(900px 700px at 12% 6%, rgba(255,209,220,.26), transparent 60%),
+        radial-gradient(900px 700px at 88% 10%, rgba(233,213,255,.24), transparent 60%),
+        radial-gradient(900px 700px at 60% 96%, rgba(186,230,253,.18), transparent 62%),
+        radial-gradient(700px 520px at 40% 30%, rgba(254,205,211,.12), transparent 62%),
+        linear-gradient(180deg, var(--bgTop), var(--bgBottom));
+    }
+
+    /* subtle sparkly grain (lighter than before) */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.08;
+      mix-blend-mode: screen;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+      background-size: 260px 260px;
+    }
+
+    /* Hearts live in this layer (side gutters only) */
+    .bgHearts{
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .heart{
+      position:absolute;
+      left: var(--x);
+      top: 110%;
+      font-size: var(--s);
+      opacity: var(--o);
+      transform: translateX(-50%);
+      filter: blur(.1px);
+      animation: floatUp var(--d) linear infinite;
+    }
+    @keyframes floatUp{
+      0%   { transform: translateX(-50%) translateY(0) rotate(0deg); }
+      100% { transform: translateX(calc(-50% + var(--drift))) translateY(-140vh) rotate(var(--rot)); }
+    }
+
+    /* Layout: grid occupies middle ~2/3 of screen */
+    .wrap{
+      width: min(66vw, 1280px);
+      min-width: min(920px, calc(100% - 40px));
+      margin: clamp(26px, 4vw, 54px) auto 70px;
+      position:relative;
+      z-index:1;
+    }
+    @media (max-width: 980px){
+      .wrap{
+        width: min(92vw, 1100px);
+        min-width: calc(100% - 32px);
+      }
+    }
+
+    header{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-bottom: 18px;
+      text-align:center;
+    }
+
+    /* More “designed” title */
+    .title{
+      margin:0;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: .2px;
+      font-weight: 800;
+
+      background: linear-gradient(90deg, rgba(255,209,220,1), rgba(233,213,255,1), rgba(186,230,253,1));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      text-shadow:
+        0 10px 38px rgba(255,209,220,.10),
+        0 10px 48px rgba(233,213,255,.08);
+      position:relative;
+      display:inline-block;
+      padding: 6px 14px 10px;
+    }
+    .title::before,
+    .title::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: min(520px, 76vw);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+    }
+    .title::before{ top:-6px; opacity:.55; }
+    .title::after{ bottom:-6px; opacity:.45; }
+
+    .titleFlourish{
+      display:block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: rgba(255,255,255,.70);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      user-select:none;
+    }
+
+    .subtitle{
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.5;
+      max-width: 70ch;
+    }
+
+    /* Bigger, tighter tiles */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 680px){
+      .grid{ grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+
+    .tile{
+      position:relative;
+      border-radius: var(--radius);
+      overflow:hidden;
+
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 14px 38px rgba(0,0,0,.32);
+
+      cursor:pointer;
+      outline:none;
+
+      height: 0;
+      padding-bottom: 86%; /* slightly taller for “bigger feel” */
+
+      transform: translateZ(0);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+
+    .tile::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(700px 240px at 30% 0%, rgba(255,209,220,.24), transparent 62%),
+        radial-gradient(700px 240px at 75% 0%, rgba(233,213,255,.22), transparent 62%),
+        linear-gradient(180deg, transparent 58%, rgba(0,0,0,.35));
+      opacity:.15;
+      transition: opacity .22s ease;
+      pointer-events:none;
+    }
+
+    .tile:hover,
+    .tile:focus-visible{
+      transform: translateY(-3px) scale(1.02);
+      border-color: rgba(255,255,255,.26);
+      box-shadow: 0 22px 60px rgba(0,0,0,.42);
+    }
+    .tile:hover::after,
+    .tile:focus-visible::after{
+      opacity:.9;
+    }
+
+    .tile img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+      transform: scale(1.02);
+      transition: transform .32s ease, filter .32s ease;
+      filter: saturate(1.04) contrast(1.03);
+    }
+    .tile:hover img,
+    .tile:focus-visible img{
+      transform: scale(1.07);
+      filter: saturate(1.08) contrast(1.05);
+    }
+
+    .badge{
+      position:absolute;
+      left: 12px;
+      top: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: rgba(255,255,255,.88);
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      opacity:0;
+      transform: translateY(-4px);
+      transition: opacity .22s ease, transform .22s ease;
+      user-select:none;
+    }
+    .tile:hover .badge,
+    .tile:focus-visible .badge{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Focus modal: larger image and card */
+    .focusOverlay{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: clamp(14px, 3vw, 28px);
+      background: var(--focusBackdrop);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 50;
+    }
+    .focusOverlay.isOpen{ display:flex; }
+
+    .focusCard{
+      width: min(1280px, 100%);
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.18);
+      background:
+        radial-gradient(900px 240px at 10% 0%, rgba(255,209,220,.16), transparent 60%),
+        radial-gradient(900px 240px at 90% 0%, rgba(233,213,255,.16), transparent 60%),
+        rgba(14,10,20,.58);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      transform: translateY(6px) scale(.985);
+      opacity:0;
+      transition: transform .22s ease, opacity .22s ease;
+      position:relative;
+    }
+    .focusOverlay.isOpen .focusCard{
+      transform: translateY(0) scale(1);
+      opacity:1;
+    }
+
+    .focusTopBar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 12px 12px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+
+    .focusMeta{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width: 0;
+    }
+    .focusTitle{
+      font-weight: 750;
+      font-size: 13.5px;
+      color: rgba(255,255,255,.92);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      max-width: 68vw;
+    }
+    .focusNote{
+        display: none;
+      /* font-size: 12.5px;
+      color: rgba(255,255,255,.70);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      max-width: 68vw; */
+    }
+
+    .focusCloseBtn{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.92);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      font-weight: 750;
+      font-size: 13px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      user-select:none;
+    }
+    .focusCloseBtn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.10);
+      border-color: rgba(255,255,255,.26);
+    }
+
+    .focusCloseIcon{
+      width: 18px; height: 18px;
+      display:inline-block;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255,209,220,.95), rgba(233,213,255,.95), rgba(186,230,253,.95));
+      position:relative;
+      box-shadow: 0 8px 22px rgba(0,0,0,.35);
+    }
+    .focusCloseIcon::before,
+    .focusCloseIcon::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:50%;
+      width: 11px;
+      height: 2px;
+      background: rgba(0,0,0,.55);
+      border-radius: 999px;
+      transform-origin:center;
+    }
+    .focusCloseIcon::before{ transform: translate(-50%,-50%) rotate(45deg); }
+    .focusCloseIcon::after{ transform: translate(-50%,-50%) rotate(-45deg); }
+
+    .focusBody{
+      padding: 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .focusImgWrap{
+      width: 100%;
+      max-height: min(82vh, 900px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+    }
+
+    .focusImg{
+      width: 100%;
+      height: auto;
+      max-height: min(82vh, 900px);
+      object-fit: contain;
+      display:block;
+      background: rgba(0,0,0,.12);
+    }
+
+    .srOnly{
+      position:absolute !important;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0);
+      white-space:nowrap; border:0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- floating hearts layer (side gutters only) -->
+  <div class="bgHearts" id="bgHearts" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header>
+      <h1 class="title">Our Wedding Photos</h1>
+      <span class="titleFlourish">♡ FOREVER & ALWAYS ♡</span>
+      <p class="subtitle"></p>
+    </header>
+
+    <section class="grid" id="photoGrid" aria-label="Wedding photo grid">
+      <!-- Tiles injected by JS -->
+    </section>
+  </main>
+
+  <!-- Focus / Modal -->
+  <div class="focusOverlay" id="focusOverlay" role="dialog" aria-modal="true" aria-labelledby="focusTitle">
+    <div class="focusCard" id="focusCard">
+      <div class="focusTopBar">
+        <div class="focusMeta">
+          <div class="focusTitle" id="focusTitle">Photo</div>
+          <div class="focusNote" id="focusNote">img1.png</div>
+        </div>
+        <button class="focusCloseBtn" id="focusCloseBtn" type="button">
+          <span class="focusCloseIcon" aria-hidden="true"></span>
+          Exit
+        </button>
+      </div>
+      <div class="focusBody">
+        <div class="focusImgWrap">
+          <img class="focusImg" id="focusImg" alt="Wedding photo in focus view" />
+        </div>
+      </div>
+    </div>
+    <button class="srOnly" id="focusTrapEnd" aria-hidden="true" tabindex="0"></button>
+  </div>
+
+  <script>
+    (function () {
+      const totalImages = 12;
+      const basePath = "";
+      const gridEl = document.getElementById("photoGrid");
+
+      const focusOverlayEl = document.getElementById("focusOverlay");
+      const focusImgEl = document.getElementById("focusImg");
+      const focusTitleEl = document.getElementById("focusTitle");
+      const focusNoteEl = document.getElementById("focusNote");
+      const focusCloseBtnEl = document.getElementById("focusCloseBtn");
+      const focusTrapEndEl = document.getElementById("focusTrapEnd");
+
+      const bgHeartsEl = document.getElementById("bgHearts");
+
+      let lastFocusedTileEl = null;
+
+      function getImgSrc(index) {
+        return `${basePath}img${index}.png`;
+      }
+
+      function openFocus(imgSrc, label, tileEl) {
+        lastFocusedTileEl = tileEl || null;
+
+        focusImgEl.src = imgSrc;
+        focusTitleEl.textContent = label;
+        focusNoteEl.textContent = imgSrc;
+
+        focusOverlayEl.classList.add("isOpen");
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+        focusCloseBtnEl.focus({ preventScroll: true });
+      }
+
+      function closeFocus() {
+        if (!focusOverlayEl.classList.contains("isOpen")) return;
+
+        focusOverlayEl.classList.remove("isOpen");
+        focusImgEl.removeAttribute("src");
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
+
+        if (lastFocusedTileEl) {
+          lastFocusedTileEl.focus({ preventScroll: true });
+        }
+      }
+
+      function createTile(index) {
+        const imgSrc = getImgSrc(index);
+        const tileEl = document.createElement("button");
+        tileEl.type = "button";
+        tileEl.className = "tile";
+        tileEl.setAttribute("aria-label", `Open photo ${index} in focus view`);
+
+        const badgeEl = document.createElement("div");
+        badgeEl.className = "badge";
+        badgeEl.textContent = `Photo ${index}`;
+
+        const imgEl = document.createElement("img");
+        imgEl.loading = "lazy";
+        imgEl.decoding = "async";
+        imgEl.alt = `Wedding photo ${index}`;
+        imgEl.src = imgSrc;
+
+        imgEl.addEventListener("error", function () {
+          imgEl.remove();
+          badgeEl.textContent = `Missing: img${index}.png`;
+        });
+
+        tileEl.appendChild(imgEl);
+        tileEl.appendChild(badgeEl);
+
+        tileEl.addEventListener("click", function () {
+          openFocus(imgSrc, `Photo ${index}`, tileEl);
+        });
+
+        tileEl.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openFocus(imgSrc, `Photo ${index}`, tileEl);
+          }
+        });
+
+        return tileEl;
+      }
+
+      function buildGrid() {
+        const frag = document.createDocumentFragment();
+        for (let i = 1; i <= totalImages; i++) {
+          frag.appendChild(createTile(i));
+        }
+        gridEl.appendChild(frag);
+      }
+
+      /* Hearts: keep them in the side gutters so they never overlap the grid */
+      function buildHearts() {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) return;
+
+        const heartCount = 18;
+        const heartChars = ["💗","💞","💕","✨","💖"];
+        const isNarrow = window.matchMedia("(max-width: 980px)").matches;
+
+        // On narrow screens, reduce the effect so it doesn't feel busy.
+        const finalCount = isNarrow ? 10 : heartCount;
+
+        bgHeartsEl.innerHTML = "";
+
+        for (let i = 0; i < finalCount; i++) {
+          const heartEl = document.createElement("div");
+          heartEl.className = "heart";
+          heartEl.textContent = heartChars[Math.floor(Math.random() * heartChars.length)];
+
+          // Place in left or right gutter bands: 0–16% or 84–100%
+          const side = Math.random() < 0.5 ? "left" : "right";
+          const xPercent = side === "left"
+            ? (Math.random() * 16)
+            : (84 + Math.random() * 16);
+
+          const sizePx = 10 + Math.random() * 10;          // 10–20px
+          const opacity = 0.10 + Math.random() * 0.18;     // 0.10–0.28
+          const duration = 10 + Math.random() * 10;        // 10–20s
+          const driftPx = (-18 + Math.random() * 36);      // -18..18px
+          const rotDeg = (-40 + Math.random() * 80) + "deg";
+          const delay = (-Math.random() * duration) + "s"; // start mid-animation
+
+          heartEl.style.setProperty("--x", xPercent + "vw");
+          heartEl.style.setProperty("--s", sizePx + "px");
+          heartEl.style.setProperty("--o", opacity.toFixed(2));
+          heartEl.style.setProperty("--d", duration.toFixed(2) + "s");
+          heartEl.style.setProperty("--drift", driftPx.toFixed(0) + "px");
+          heartEl.style.setProperty("--rot", rotDeg);
+          heartEl.style.animationDelay = delay;
+
+          bgHeartsEl.appendChild(heartEl);
+        }
+      }
+
+      // Close behaviors
+      focusCloseBtnEl.addEventListener("click", closeFocus);
+
+      focusOverlayEl.addEventListener("click", function (e) {
+        if (e.target === focusOverlayEl) closeFocus();
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeFocus();
+      });
+
+      focusTrapEndEl.addEventListener("focus", function () {
+        if (focusOverlayEl.classList.contains("isOpen")) {
+          focusCloseBtnEl.focus({ preventScroll: true });
+        }
+      });
+
+      buildGrid();
+      buildHearts();
+
+      window.addEventListener("resize", function () {
+        // Rebuild so gutter widths feel correct when crossing breakpoints
+        buildHearts();
+      });
+    })();
+  </script>
+</body>
+</html>
