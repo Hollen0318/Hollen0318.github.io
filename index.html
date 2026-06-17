@@ -1,150 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Personal Website Hollen (Haoran) Zhang</title>
-  <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-  <header>
-    <img src="assets/hollen.jpg" alt="Profile picture" class="profile-pic">
-    <h1>Hollen (Haoran) Zhang</h1>
-    <nav>
-      <a href="index.html" style="color:blue">About</a>
-      <a href="educations/index.html">Educations</a>
-      <a href="publications/index.html">Publications</a>
-      <a href="projects/index.html">Projects</a>
-      <a href="presentations/index.html">Presentations</a>
-      <a href="repositories/index.html">Repositories</a>
-      <a href="blogs/index.html">Blogs</a>
-      <a href="https://github.com/Hollen0318/Hollen0318.github.io/blob/main/downloads/_CV.pdf">CV</a>
-      <a href="../contacts/index.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <section id="intro">
-      <h2>About me</h2>
-      <p>Hello! My name is Hollen (Haoran) Zhang, I am currently a PhD student of Computer Engineering at <a href="https://watsonresearchlab.org/">Watson Research Lab</a> in the University of Virginia, proudly advised by Professor <a href="https://engineering.virginia.edu/faculty/amanda-watson">Amanda Watson</a>. My current research focuses on machine learning for healthcare, particularly on wearable monitoring systems. I am also interested in ubiquitous computing and multimodal deep learning.</p>
-    </section>
+---
+layout: default
+---
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education-list">
-        <div class="education-card">
-          <h3>Ph.D. in Computer Engineering</h3>
-          <div class="education-meta">
-            University of Virginia, Charlottesville, VA · Expected May 2029
-          </div>
-          <p><strong>Main Courses:</strong> Computer Architecture, AI Hardware, Computer Engineering Perspectives, Human-Computer Interaction</p>
-          <p><strong>Research Focus:</strong> Machine learning for real-time biomarker detection and wearable monitoring systems</p>
-        </div>
+<section class="hero">
+  <img class="hero-photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}">
+  <div class="hero-body">
+    <h1>{{ site.author.name }}</h1>
+    <p class="hero-role">{{ site.author.role }}</p>
+    <p class="hero-affil">
+      <a href="{{ site.author.lab_url }}" target="_blank" rel="noopener">{{ site.author.lab }}</a>,
+      <a href="{{ site.author.affiliation_url }}" target="_blank" rel="noopener">{{ site.author.affiliation }}</a><br>
+      Advised by <a href="{{ site.author.advisor_url }}" target="_blank" rel="noopener">Prof. {{ site.author.advisor }}</a>
+      <span class="dot">·</span> {{ site.author.location }}
+    </p>
+    {% include social.html show_cv=true %}
+  </div>
+</section>
 
-        <div class="education-card">
-          <h3>Master of Science in Computer Science</h3>
-          <div class="education-meta">
-            Duke University, Durham, NC · April 2024 · GPA: 3.95 (Dean’s List)
-          </div>
-          <p><strong>Main Courses:</strong> Algorithms, NLP, Artificial Neural Networks, Probabilistic Machine Learning, Data Science, Computer Vision, Graph-Matrix Analysis, Cryo-EM Image Analysis</p>
-          <p><strong>Projects:</strong> OpenOOD Benchmark, Fetus Brain MRI Motion Correction, Adversarial Knowledge Distillation</p>
-        </div>
+<section class="section" id="about">
+  <p class="lead">
+    I'm a Ph.D. candidate in Computer Engineering at the University of Virginia, working in the
+    <a href="{{ site.author.lab_url }}" target="_blank" rel="noopener">Watson Research Lab</a> with
+    Prof. <a href="{{ site.author.advisor_url }}" target="_blank" rel="noopener">Amanda Watson</a>.
+  </p>
+  <p>
+    My research is on <strong>machine learning for healthcare</strong> — building wearable
+    monitoring systems that detect biomarkers such as glucose and opioids in real time from
+    multi-wavelength optical and time-series sensor data. I'm also interested in ubiquitous
+    computing and multimodal deep learning. Before UVA, I earned an M.S. in Computer Science from
+    Duke University and a B.S. in Information Systems from the George Washington University.
+  </p>
+</section>
 
-        <div class="education-card">
-          <h3>Bachelor of Science in Information Systems</h3>
-          <div class="education-meta">
-            The George Washington University, Washington, DC · May 2022 · GPA: 3.95 (Dean’s List)
-          </div>
-          <p><strong>Main Courses:</strong> Algorithms and Analysis, Artificial Intelligence, Information Systems Security, Database Design, Mobile App Development, Web Development, Web Analytics, IoT Management</p>
-        </div>
+<section class="section" id="news">
+  <div class="section-head"><h2>News</h2></div>
+  <ul class="news">
+    {% for item in site.data.news %}
+    <li><span class="when">{{ item.when }}</span><span class="what">{{ item.text }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section" id="selected-publications">
+  <div class="section-head">
+    <h2>Selected Publications</h2>
+    <a class="more" href="{{ '/publications/' | relative_url }}">All publications →</a>
+  </div>
+  {% for pub in site.data.publications limit: 3 %}
+    {% include pub.html pub=pub %}
+  {% endfor %}
+</section>
+
+<section class="section" id="selected-projects">
+  <div class="section-head">
+    <h2>Selected Projects</h2>
+    <a class="more" href="{{ '/projects/' | relative_url }}">All projects →</a>
+  </div>
+  {% assign research = site.data.projects | where: "category", "Research" %}
+  <div class="cards">
+    {% for project in research limit: 3 %}
+      {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="section-head"><h2>Education</h2></div>
+  <ul class="timeline">
+    {% for ed in site.data.education %}
+    <li>
+      <span class="when">{{ ed.period }}</span>
+      <div class="what">
+        <strong>{{ ed.degree }}</strong><br>
+        {{ ed.school }} <span class="sub">· {{ ed.place }}</span>
+        {% if ed.note %}<br><span class="sub">{{ ed.note }}</span>{% endif %}
       </div>
-    </section>
-
-    <section id="latest-projects">
-      <h2>Recent Projects</h2>
-      <div class="project-list">
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="projects/openSpectro/thumbnail.png" alt="OpenSpectro Thumbnail">
-          </div>
-
-          <div class="project-details">
-
-            <h3><a href="projects/openspectro/index.html">OpenSpectro: An Open-Source Spectroscopic Profile Platform</a></h3>
-
-            <div class="project-meta">
-              <span class="project-location">Lead Author @ Watson Research Lab - Charlottesville, VA</span>
-              <span class="project-date">· April 2025</span>
-            </div>
-
-            <p class="project-abstract">
-              OpenSpectro is a modular, open-source platform designed to acquire and analyze spectroscopic data. It provides researchers with affordable, customizable tools for spectroscopy experiments.
-            </p>
-
-            <a class="project-link" href="projects/openspectro/index.html">View Project →</a>
-
-          </div>
-        </div>
-
-        <div class="project-card">
-
-          <div class="project-image">
-
-            <img src="projects/bloodPressureTarek/thumbnail.png" alt="A Multi-Wavelength Optical Sensing Framework for Calibration-Free Wearable Blood Pressure Monitoring">
-          </div>
-
-          <div class="project-details">
-
-            <h3><a href="projects/bloodPressureTarek/index.html">A Multi-Wavelength Optical Sensing Framework for Calibration-Free Wearable Blood Pressure Monitoring</a></h3>
-
-            <div class="project-meta">
-              <span class="project-location">Co-author with <a href="https://watsonresearchlab.org/author/tarek-hamid/">Tarek Hamid</a> @ Watson Research Lab - Charlottesville, VA </span>
-              <span class="project-date">· June 2024</span>
-            </div>
-
-            <p class="project-abstract">
-              A deep learning framework to correct motion artifacts in fetal brain MRI scans, improving diagnostic image quality and supporting prenatal healthcare.
-            </p>
-
-            <a class="project-link" href="projects/bloodPressureTarek/index.html">View Project →</a>
-          </div>
-
-        </div>
-
-        <div class="project-card">
-
-          <div class="project-image">
-
-            <img src="projects/openOOD/thumbnail.png" alt="OpenOOD v1.5: Enhanced Benchmark for Out-of-Distribution Detection">
-          </div>
-
-          <div class="project-details">
-
-            <h3><a href="projects/openOOD/index.html">OpenOOD v1.5: Enhanced Benchmark for Out-of-Distribution Detection</a></h3>
-
-            <div class="project-meta">
-              <span class="project-location">Co-author with <a href="https://zjysteven.github.io/">Dr. Jingyang Zhang</a> @ Duke CEI Lab - Durham, NC </span>
-              <span class="project-date">· June 2024</span>
-            </div>
-
-            <p class="project-abstract">
-              A deep learning framework to correct motion artifacts in fetal brain MRI scans, improving diagnostic image quality and supporting prenatal healthcare.
-            </p>
-
-            <a class="project-link" href="projects/fetusBrain/index.html">View Project →</a>
-          </div>
-
-        </div>
-
-
-
-
-      </div>
-    </section>
-
-    <!-- Add similar teasers for publications, Blogs posts, etc. -->
-  </main>
-  <footer>
-    &copy; 2025 Hollen (Haoran) Zhang
-  </footer>
-</body>
-</html>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

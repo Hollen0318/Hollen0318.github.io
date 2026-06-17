@@ -1,0 +1,201 @@
+# Projects. `category` groups them on the page: "Research" or "Applied".
+# `image` is a file in /assets/img/projects/ (omit for a lettered placeholder).
+# `links` is optional: add {label, url} pairs (Repo, Paper, Slides, Demo, Page, ...).
+
+- key: optiLact
+  title: "OptiLact: Wearable Lactate Monitoring during Exercise"
+  role: "Lead · Doctoral Researcher"
+  venue: "Watson Research Lab, University of Virginia"
+  period: "2025 – Present"
+  category: Research
+  image: optiLact.svg
+  desc: >-
+    A wearable broad-band optical spectroscopy system for noninvasive lactate estimation during
+    exercise. It captures broadband optical signals across lactate-sensitive bands and applies a
+    two-stage hierarchical regression — a PLS model for the per-session trend and an ElasticNet
+    model for the absolute level. Validated in vitro and in an in-vivo cycling study (11
+    participants, VO₂max protocols), reaching R² ≈ 0.62. Paper under review.
+  links:
+    - { label: "Code", url: "https://github.com/Hollen0318/OptiLact" }
+
+- key: lumosWorkbench
+  title: "Lumos Workbench: Wearable Spectroscopy Device Stack"
+  role: "Lead · Doctoral Researcher"
+  venue: "Watson Research Lab, University of Virginia"
+  period: "2024 – Present"
+  category: Research
+  image: lumosWorkbench.svg
+  desc: >-
+    The full hardware-and-software stack for the Lumos multi-wavelength wearable spectroscopy
+    device: Arduino firmware across board revisions (9–11 LEDs, up to 940 nm), Python analysis
+    tooling, and a companion Swift iOS app.
+  links:
+    - { label: "Code", url: "https://github.com/Hollen0318/LumosWorkbench" }
+
+- key: adubWearable
+  title: "Adub: A Meta-PPG Data Toolkit"
+  role: "Lead · Doctoral Researcher"
+  venue: "Watson Research Lab, University of Virginia"
+  period: "2024 – Present"
+  category: Research
+  image: adubWearable.svg
+  desc: >-
+    An open-source Python package for storing, managing, analyzing, and visualizing
+    multi-wavelength PPG measurements from the Lumos wearable. Each Adub object holds one subject's
+    measurement, with dataset storage, export, and quick-view utilities.
+  links:
+    - { label: "Code", url: "https://github.com/WatsonResearchLabOrganization/AdubWearable" }
+
+- key: openSpectro
+  title: "OpenSpectro: An Open-Source Spectroscopic Profiling Platform"
+  role: "Lead · Doctoral Researcher"
+  venue: "Watson Research Lab, University of Virginia"
+  period: "2024 – Present"
+  category: Research
+  image: openSpectro.png
+  desc: >-
+    A modular, open-source platform that acquires, visualizes, and optimizes spectroscopic
+    biomarker profiles. I built the data structures and server architecture for multi-channel
+    wavelength time-series from custom wearable biosensors, plus a spectral-attention model and a
+    curated biomarker database that improves PPG sensor performance.
+  links:
+    - { label: "Paper", url: "/files/openSpectro.pdf" }
+    - { label: "Lab", url: "https://watsonresearchlab.org/" }
+
+- key: bloodPressureTarek
+  title: "Calibration-Free Wearable Blood Pressure Monitoring"
+  role: "Co-author"
+  venue: "Watson Research Lab, University of Virginia"
+  period: "2024"
+  category: Research
+  image: bloodPressureTarek.png
+  desc: >-
+    A multi-wavelength optical sensing framework for cuffless, calibration-free blood-pressure
+    estimation from wearable PPG. I contributed to the modeling and analysis of the multi-channel
+    optical signals. Published at ICASSP 2025.
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2401.16782" }
+
+- key: fetusBrain
+  title: "A Review of Fetal Brain MRI Motion Correction"
+  role: "Research Intern"
+  venue: "InfantSegrl Lab · remote with Prof. Yun Wang"
+  period: "2023 – 2024"
+  category: Research
+  image: fetusBrain.png
+  desc: >-
+    Authored a comprehensive review of fetal-brain-MRI motion-correction methods — spanning CNNs,
+    LSTMs, Transformers, GANs, and diffusion models — and their implications for prenatal imaging.
+
+- key: openOOD
+  title: "OpenOOD v1.5: Enhanced Benchmark for Out-of-Distribution Detection"
+  role: "Co-author · Research Assistant"
+  venue: "Duke CEI Lab · with Dr. Jingyang Zhang"
+  period: "2023"
+  category: Research
+  image: openOOD.png
+  desc: >-
+    A unified, full-spectrum benchmark for OOD detection. I helped analyze 100+ papers and
+    benchmark ~40 methods on ImageNet-1K, and built an online leaderboard and a lightweight OOD
+    evaluator. Accepted at the NeurIPS 2023 DistShift workshop.
+  links: []   # TODO: add Repo / Paper / Leaderboard links
+
+- key: llmMemory
+  title: "LLMs as Agent Memory Architecture"
+  role: "Research Assistant"
+  venue: "General Robotics Lab, Duke · Prof. Boyuan Chen"
+  period: "2023"
+  category: Research
+  image: llmMemory.png
+  desc: >-
+    Explored using LLMs as a memory architecture for autonomous agent control in a simulated
+    MiniGrid world. I generated 250K GPT-3.5 tokens, engineered prompts for decision-making and
+    experience summarization, and designed a compact representation of observations, status, and
+    past actions within a limited context window.
+  links:
+    - { label: "Code", url: "https://github.com/Hollen0318/LLMs_As_Agent_Memory_Architecture" }
+
+- key: knowledgeDis
+  title: "Knowledge Distillation in an Adversarial Context"
+  role: "ECE 661 · Duke, Prof. Yiran Chen"
+  period: "2022"
+  category: Research
+  image: knowledgeDis.png
+  desc: >-
+    Studied attack classes that degrade neural networks and adversarial-training schemes
+    (student–teacher, teacher-free, self-distillation), then designed an efficient adversarial-
+    training method based on knowledge distillation.
+
+- key: digraphClus
+  title: "Digraph Clustering by Marginal Propagation"
+  role: "CPS 521 · Duke, Prof. Xiaobai Sun"
+  period: "2022"
+  category: Research
+  image: digraphClus.png
+  desc: >-
+    Proposed a directed-graph clustering algorithm based on marginal propagation, framing
+    community detection on the Email-EU-Core dataset as a semi-supervised learning task.
+
+- key: atomicModel
+  title: "Atomic Modelling from Cryo-EM Density Maps"
+  role: "Research · with Prof. Alberto Bartesaghi"
+  venue: "Duke University"
+  period: "2022"
+  category: Research
+  desc: >-
+    Investigated automated atomic-model building from cryo-EM density maps for structural biology.
+
+- key: blueDevilBites
+  title: "BlueDevil Bites: Campus Restaurant Reviews"
+  role: "ECE 564 Mobile App Development · Duke"
+  period: "2023"
+  category: Applied
+  image: blueDevilBites.png
+  desc: >-
+    An iOS app showing real-time reviews and menus for Duke's West Campus cafeterias. Built with
+    SwiftUI and a Vapor server on AWS EC2 (SQLite), integrating MapKit and Duke's Streamer API,
+    with App Clips launched via QR codes and NFC tags.
+
+- key: csgoInsight
+  title: "Strategic Insights from Elite CS:GO Play"
+  role: "CPS 526 Data Science · Duke"
+  period: "2023"
+  category: Applied
+  image: csgoInsight.png
+  desc: >-
+    Analyzed 122,411 elite-match gameplay snapshots with neural networks and PCA to correlate
+    equipment usage with round outcomes and surface game-turning strategies.
+
+- key: alphaRent
+  title: "Alpha Rent Solutions: Real-Estate Management"
+  role: "ISTM 4210 Capstone · GWU"
+  period: "2022"
+  category: Applied
+  image: alphaRent.png
+  desc: >-
+    A full-stack rental-management platform: a MySQL data model with ER diagrams, an
+    object-oriented PHP backend on MAMP, and an HTML/CSS/JS interface with token-based
+    registration links.
+
+- key: movieReco
+  title: "Movie Recommendation from IMDb Reviews"
+  role: "ISTM 4217 Internet of Things · GWU"
+  period: "2022"
+  category: Applied
+  image: movieReco.png
+  desc: >-
+    A recommendation engine over 1B+ IMDb entries (2000–2020) combining collaborative filtering
+    (ALS), Word2Vec NLP, and logistic regression (RMSE 1.15), with TF-IDF similarity across
+    2M+ words.
+
+- key: tritanopeAccess
+  title: "Tritanope Accessibility Algorithm"
+  role: "Accessibility Engineer · Information Accessibility Research Association"
+  venue: "Shenzhen, China"
+  period: "2021"
+  category: Applied
+  image: tritanopeAccess.png
+  desc: >-
+    Designed a tritanope accessibility algorithm that optimizes web and app color layouts for
+    WCAG 2.0 compliance, plus Python/VBA data-migration and triage scripts that improved testing
+    efficiency by ~50%. Recognized with the Outstanding Intern Award.

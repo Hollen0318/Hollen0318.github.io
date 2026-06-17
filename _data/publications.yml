@@ -1,0 +1,63 @@
+# Publications. Newest first. `type` is one of: published | preprint | draft
+# `links` is optional — add {label, url} pairs as papers go online.
+# Your name is automatically bolded wherever it appears in `authors`.
+
+- title: "OptiLact: A Wearable Broad-band Optical Device for Continuous Lactate Monitoring during Exercise"
+  authors: "Haoran Zhang, et al."   # TODO: fill in the full author list
+  venue: "In submission"
+  year: 2026
+  type: preprint
+  tag: "Under review"
+  links:
+    - { label: "Code", url: "https://github.com/Hollen0318/OptiLact" }
+
+- title: "OpenSpectro: An Open-Source Spectroscopic Profiling Platform"
+  authors: "Haoran Zhang, Elizabeth C. Courtney, Kyle C. Quinn, Amanda Watson"
+  venue: "47th Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)"
+  year: 2025
+  type: published
+  tag: "EMBC 2025"
+  links:
+    - { label: "PDF", url: "/files/openSpectro.pdf" }
+    # - { label: "Code", url: "" }   # TODO: add repo if public
+
+- title: "A Multi-Wavelength Optical Sensing Framework for Calibration-Free Wearable Blood Pressure Monitoring"
+  authors: "Tarek Hamid, Patricia Flores, Jane Byun, Xi Chen, Haoran Zhang, Kyle Quinn, Amanda Watson"
+  venue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  year: 2025
+  type: published
+  tag: "ICASSP 2025"
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2401.16782" }   # TODO: confirm this is the correct arXiv id
+
+- title: "OpenOOD v1.5: Enhanced Benchmark for Out-of-Distribution Detection"
+  authors: "Jingyang Zhang, Haoran Zhang, et al., Yiran Chen, Hai Li"
+  venue: "NeurIPS 2023 Workshop on Distribution Shifts (DistShift); Data-centric Machine Learning Research (DMLR)"
+  year: 2023
+  type: published
+  tag: "NeurIPS 2023"
+  links: []   # TODO: add arXiv + code links
+
+- title: "A Literature Review on Fetal Brain Motion Correction in MRI"
+  authors: "Haoran Zhang, Yun Wang"
+  venue: "Manuscript"
+  year: 2023
+  type: draft
+
+- title: "Knowledge Distillation in Adversarial Context"
+  authors: "Haoran Zhang, Liang Zhuo, M. Kuo"
+  venue: "Manuscript"
+  year: 2022
+  type: draft
+
+- title: "Digraph Clustering by Marginal Propagation"
+  authors: "Haoran Zhang"
+  venue: "Manuscript"
+  year: 2022
+  type: draft
+
+- title: "Atomic Modelling from Cryo-EM Density Maps"
+  authors: "Haoran Zhang, Alberto Bartesaghi"
+  venue: "Manuscript"
+  year: 2022
+  type: draft

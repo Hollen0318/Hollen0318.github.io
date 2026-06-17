@@ -1,0 +1,8 @@
+- group: "Languages"
+  items: ["Python", "Swift", "Java", "PHP", "SQL", "R", "JavaScript", "HTML", "CSS", "SAS"]
+
+- group: "ML & Data"
+  items: ["PyTorch", "scikit-learn", "NumPy", "Gymnasium", "Pygame"]
+
+- group: "Tools"
+  items: ["Xcode", "IntelliJ", "Android Studio", "VS Code", "MATLAB", "RStudio", "3D Slicer"]

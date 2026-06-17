@@ -1,0 +1,9 @@
+# Most recent first. `text` may contain simple HTML (e.g. <strong>, <a>).
+- when: "May 2025"
+  text: "Presented <strong>OpenSpectro</strong> at IEEE EMBC 2025 in Copenhagen, Denmark."
+- when: "2025"
+  text: "Our paper on calibration-free wearable blood-pressure monitoring appeared at <strong>ICASSP 2025</strong>."
+- when: "2024"
+  text: "Began my Ph.D. at the <strong>University of Virginia</strong> (Watson Research Lab) and received the <strong>Ph.D. Provost Fellowship</strong>."
+- when: "Dec 2023"
+  text: "Presented <strong>OpenOOD v1.5</strong> at the <strong>NeurIPS 2023</strong> DistShift workshop."

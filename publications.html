@@ -1,0 +1,25 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+description: "Publications by Hollen (Haoran) Zhang."
+---
+
+<section class="section">
+  <div class="section-head"><h2>Publications</h2>
+    {% if site.author.scholar and site.author.scholar != "" %}
+    <a class="more" href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar →</a>
+    {% endif %}
+  </div>
+
+  {% assign years = site.data.publications | map: "year" | uniq | sort | reverse %}
+  {% for yr in years %}
+  <div class="pub-group">
+    <p class="pub-year">{{ yr }}</p>
+    {% assign pubs = site.data.publications | where: "year", yr %}
+    {% for pub in pubs %}
+      {% include pub.html pub=pub %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>

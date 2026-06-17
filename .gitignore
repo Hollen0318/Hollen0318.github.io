@@ -1,1 +1,13 @@
+# Jekyll build output & caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler (Gemfile.lock is kept intentionally)
+vendor/
+.bundle/
+
+# OS
 *.DS_Store
+.DS_Store

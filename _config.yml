@@ -1,0 +1,51 @@
+# --- Site ---
+title: Hollen (Haoran) Zhang
+tagline: Ph.D. Candidate in Computer Engineering
+description: >-
+  Hollen (Haoran) Zhang — Ph.D. Candidate in Computer Engineering at the
+  University of Virginia (Watson Research Lab). Machine learning for healthcare,
+  wearable monitoring systems, and real-time biomarker detection.
+url: "https://hollen0318.github.io"
+baseurl: ""
+lang: en
+
+# --- Profile (edit these to update the whole site) ---
+author:
+  name: Hollen (Haoran) Zhang
+  short_name: Hollen Zhang
+  role: Ph.D. Candidate, Computer Engineering
+  affiliation: University of Virginia
+  affiliation_url: https://www.virginia.edu/
+  lab: Watson Research Lab
+  lab_url: https://watsonresearchlab.org/
+  advisor: Amanda Watson
+  advisor_url: https://engineering.virginia.edu/faculty/amanda-watson
+  location: Charlottesville, VA
+  email: Hollen.Zhang@outlook.com
+  photo: /assets/img/hollen.jpg
+  cv: /files/CV.pdf
+
+# Links shown as icons. Leave a value as "" to hide that icon.
+social:
+  github: "https://github.com/Hollen0318"
+  linkedin: "https://www.linkedin.com/in/hollen-zhang/"
+  scholar: "https://scholar.google.com/citations?user=hIlL_E8AAAAJ&hl=en"
+  orcid: ""             # TODO (optional): paste your ORCID URL
+
+# Privacy-friendly analytics (no cookies, no banner). Fill ONE to switch it on site-wide.
+analytics:
+  goatcounter: ""       # your GoatCounter code -> creates https://<code>.goatcounter.com
+  cloudflare: ""        # Cloudflare Web Analytics beacon token
+
+# --- Build ---
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .DS_Store
+  - "*.psd"

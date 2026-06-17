@@ -1,0 +1,66 @@
+---
+layout: default
+title: Service & Awards
+permalink: /service/
+description: "Academic service, talks, honors, and skills of Hollen (Haoran) Zhang."
+---
+
+<section class="section" id="service">
+  <div class="section-head"><h2>Academic Service</h2></div>
+  {% if site.data.service and site.data.service.size > 0 %}
+  <ul class="timeline">
+    {% for s in site.data.service %}
+    <li>
+      <span class="when">{{ s.year }}</span>
+      <p class="what"><strong>{{ s.role }}</strong>{% if s.venue %} <span class="sub">· {{ s.venue }}</span>{% endif %}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="callout">
+    Reviewing and artifact-evaluation roles will appear here. Add them in
+    <code>_data/service.yml</code> (role · venue · year) and they'll render automatically.
+  </div>
+  {% endif %}
+</section>
+
+<section class="section" id="talks">
+  <div class="section-head"><h2>Talks &amp; Presentations</h2></div>
+  <ul class="timeline">
+    {% for t in site.data.presentations %}
+    <li>
+      <span class="when">{{ t.when }}</span>
+      <div class="what">
+        <strong>{{ t.title }}</strong><br>
+        <span class="sub">{{ t.event }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section" id="awards">
+  <div class="section-head"><h2>Honors &amp; Awards</h2></div>
+  <ul class="timeline">
+    {% for a in site.data.awards %}
+    <li>
+      <span class="when">{{ a.when }}</span>
+      <p class="what"><strong>{{ a.what }}</strong> <span class="sub">· {{ a.org }}</span></p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-head"><h2>Skills</h2></div>
+  {% for s in site.data.skills %}
+  <p class="card-meta" style="margin-bottom:.3rem"><strong>{{ s.group }}</strong></p>
+  <ul class="chips" style="margin-bottom:1rem">
+    {% for item in s.items %}<li>{{ item }}</li>{% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <a class="btn" href="{{ site.author.cv | relative_url }}" target="_blank" rel="noopener">Download full CV (PDF)</a>
+</section>

@@ -1,0 +1,26 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+description: "Research and applied projects by Hollen (Haoran) Zhang."
+---
+
+<section class="section">
+  <div class="section-head"><h2>Projects</h2></div>
+  <p class="muted">Research and applied work, from wearable-sensing systems to coursework and internships.</p>
+</section>
+
+{% assign categories = "Research,Applied" | split: "," %}
+{% for cat in categories %}
+{% assign group = site.data.projects | where: "category", cat %}
+{% if group.size > 0 %}
+<section class="section">
+  <div class="section-head"><h2>{{ cat }}</h2></div>
+  <div class="cards">
+    {% for project in group %}
+      {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}

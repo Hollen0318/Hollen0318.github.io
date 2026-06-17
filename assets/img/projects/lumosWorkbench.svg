@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Lumos Workbench">
+  <defs>
+    <linearGradient id="bgl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1b2e"/><stop offset="1" stop-color="#102a3a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bgl)"/>
+  <rect width="600" height="420" fill="url(#glow)"/>
+  <!-- LED ring of the wearable device -->
+  <g>
+    <circle cx="300" cy="180" r="92" fill="none" stroke="#2a4a66" stroke-width="14"/>
+    <g>
+      <circle cx="300" cy="88"  r="13" fill="#6ea8ff"/>
+      <circle cx="365" cy="115" r="13" fill="#49c9d6"/>
+      <circle cx="392" cy="180" r="13" fill="#5bd6a0"/>
+      <circle cx="365" cy="245" r="13" fill="#b6e25a"/>
+      <circle cx="300" cy="272" r="13" fill="#ffd24a"/>
+      <circle cx="235" cy="245" r="13" fill="#ff9d4a"/>
+      <circle cx="208" cy="180" r="13" fill="#ff6a5e"/>
+      <circle cx="235" cy="115" r="13" fill="#e8506e"/>
+    </g>
+    <circle cx="300" cy="180" r="34" fill="#0d1b2e" stroke="#2a4a66" stroke-width="4"/>
+  </g>
+  <text x="60" y="375" fill="#fff" font-family="Georgia, serif" font-size="40" font-weight="600">Lumos Workbench</text>
+  <text x="62" y="402" fill="#bfe0ff" font-family="-apple-system, Helvetica, sans-serif" font-size="17" letter-spacing="1">Multi-wavelength device stack</text>
+</svg>

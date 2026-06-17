@@ -1,0 +1,20 @@
+{%- assign p = include.project -%}
+<article class="card">
+  {%- if p.image -%}
+  <div class="card-thumb"><img src="{{ '/assets/img/projects/' | append: p.image | relative_url }}" alt="{{ p.title }} thumbnail" loading="lazy"></div>
+  {%- else -%}
+  <div class="card-thumb placeholder" aria-hidden="true">{{ p.title | slice: 0 }}</div>
+  {%- endif -%}
+  <div class="card-body{% unless p.image %} no-thumb{% endunless %}">
+    <h3 class="card-title">{{ p.title }}</h3>
+    <p class="card-meta"><span class="role">{{ p.role }}</span>{% if p.venue %} · {{ p.venue }}{% endif %}{% if p.period %} · {{ p.period }}{% endif %}</p>
+    <p class="card-desc">{{ p.desc }}</p>
+    {%- if p.links and p.links.size > 0 -%}
+    <div class="badges">
+      {%- for l in p.links -%}
+      <a class="badge" href="{{ l.url | relative_url }}"{% if l.url contains '//' %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+</article>

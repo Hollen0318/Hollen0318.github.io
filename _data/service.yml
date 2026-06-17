@@ -1,0 +1,9 @@
+# Academic service: reviewing, artifact evaluation, program committees, etc.
+# Add more by copying a block:  - role / venue / year
+- role: "Reviewer"
+  venue: "IEEE EMBC"
+  year: "2026"
+
+- role: "Artifact Evaluator"
+  venue: "USENIX OSDI"
+  year: "2026"

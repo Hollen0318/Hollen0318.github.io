@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Adub PPG Toolkit">
+  <defs>
+    <linearGradient id="bga" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10182e"/><stop offset="1" stop-color="#0f2433"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5b8cff"/><stop offset=".5" stop-color="#49d6c4"/><stop offset="1" stop-color="#b6e25a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bga)"/>
+  <!-- PPG-like waveform -->
+  <path d="M40 200 q30 0 45 -55 q12 -45 28 0 q10 40 30 40 q18 0 30 60 q10 50 26 -90 q12 -55 30 0 q12 48 32 48 q20 0 32 -60 q12 -48 30 6 q12 44 30 44 q22 0 36 -30 l65 0"
+        fill="none" stroke="url(#wave)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#6ea8ff">
+    <circle cx="150" cy="60" r="6"/><circle cx="300" cy="40" r="6"/><circle cx="450" cy="62" r="6"/>
+  </g>
+  <text x="60" y="345" fill="#fff" font-family="Georgia, serif" font-size="40" font-weight="600">Adub</text>
+  <text x="62" y="372" fill="#bfe0ff" font-family="-apple-system, Helvetica, sans-serif" font-size="17" letter-spacing="1">Meta-PPG data toolkit</text>
+</svg>

@@ -1,0 +1,7 @@
+{%- comment -%} Privacy-friendly analytics. Stays off until a code/token is set in _config.yml (analytics:). {%- endcomment -%}
+{%- if site.analytics.goatcounter and site.analytics.goatcounter != "" -%}
+<script data-goatcounter="https://{{ site.analytics.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{%- endif -%}
+{%- if site.analytics.cloudflare and site.analytics.cloudflare != "" -%}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflare }}"}'></script>
+{%- endif -%}
