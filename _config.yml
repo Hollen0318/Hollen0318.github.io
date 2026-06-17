@@ -34,8 +34,8 @@ social:
 
 # Privacy-friendly analytics (no cookies, no banner). Fill ONE to switch it on site-wide.
 analytics:
-  goatcounter: ""       # your GoatCounter code -> creates https://<code>.goatcounter.com
-  cloudflare: ""        # Cloudflare Web Analytics beacon token
+  goatcounter: "hollen0318"   # -> https://hollen0318.goatcounter.com
+  cloudflare: ""              # Cloudflare Web Analytics beacon token
 
 # --- Build ---
 markdown: kramdown
